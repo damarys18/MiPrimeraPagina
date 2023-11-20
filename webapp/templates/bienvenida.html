@@ -42,6 +42,7 @@
             <th scope="col">Estado</th>
         </tr>
     </thead>
+    <tbody class="table-group-divider">
         {% for docente in docentes %}
             <tr scope="row" >
                 <td>{{docente.nombre}}</td>
@@ -64,6 +65,7 @@
                 <td><a href="eliminar_docente/{{docente.id}}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a></td>
             </tr>
         {% endfor %}
+    </tbody>
 </table>
 </body>
 </html>
