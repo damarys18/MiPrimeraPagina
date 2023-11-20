@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body {background-color:beige;}
+    h1 {color:purple;}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Agregar Docente</title>
+</head>
+<body>
+    <h1>Agregar Docente</h1>
+
+        <form method="POST">
+            <table>{{formulario}}</table>
+            <input type="submit" value="Grabar">
+            {% csrf_token %}
+        </form>
+    <br>
+    <br>
+    <a href="{%url 'inicio'%}">Regresar</a><br>
+
+</body>
+</html>

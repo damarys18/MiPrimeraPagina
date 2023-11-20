@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body {background-color:beige;}
+    h3 {color:blue;}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Ver Docente</title>
+</head>
+<body>
+
+    <h3>Datos del Docente</h3>
+Id: {{docente.id}}<br>
+Nombre: {{docente.nombre}}<br>
+Apellido: {{docente.apellido}}<br>
+Cedula: {{docente.cedula}}<br>
+Email: {{docente.email}}<br>
+Materia: {{docente.materia}}<br>
+Institucion: {{docente.institucion}}<br>
+Fecha de nacimiento: {{docente.fecha_de_nacimiento}}<br>
+Celular: {{docente.celular}}<br>
+Sexo: {{docente.sexo}}<br>
+Estado: {% if docente.activo %}
+                            Activo
+                      {% else %}
+                            Inactivo
+                      {% endif %}<br>
+
+
+    <h3>Detalles de la Materia</h3>
+Nombre: {{docente.materia.nombre}}<br>
+Horas: {{docente.materia.horas}}<br>
+Institucion: {{docente.materia.institucion}}<br>
+Alumno: {{docente.materia.alumno}}<br>
+
+
+    <h3>Detalles de la Institucion</h3>
+Nombre: {{docente.institucion.nombre}}<br>
+Direccion: {{docente.institucion.direccion}}<br>
+Numero: {{docente.institucion.numero}}<br>
+    <br>
+    <br>
+
+    <a href="{%url 'inicio'%}">Regresar</a><br>
+
+</body>
+</html>
